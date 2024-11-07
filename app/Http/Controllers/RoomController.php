@@ -5,47 +5,32 @@ namespace App\Http\Controllers;
 use app\Models\Locker;
 use Illuminate\Http\Request;
 
+use function Pest\Laravel\delete;
 
 class RoomController extends Controller
 {
     public function newbeer (request $request){
-        $locker = $request->locker;
+        $Locker = $request->Locker;
         Locker::created([
 
-            'name' =>$locker['name'],
-            'description'=>$locker['descritpion'],
-            'price'=>$locker['price'],
-            'type'=>$locker['type']
+            'name' => $Locker->name_beer,
+            'description' => $Locker->description_beer,
+            'price' => $Locker->price_beer,
+            'type' => $Locker->type_beer,
 
         ]);
 
-        return response()->json($locker);
     }
 
     public function editdrink (Request $request, int $id){
         $locker = Locker::findorfail($id);
-        $locker->name = $request->name;
-        $locker->description = $request->descritption;
-        $locker->price =  $request->description;
-        $locker->type = $request->type;
-
-
-        return response()->json($locker);
+        return view('editdrink');
 
     }
 
     public function delete (Request $request, int $id){
         $locker = Locker::findorfail($id);
-        if($locker->delete()){
-            return response()->json([
-                'status' => 'deleted',
-                'message' => 'The beer has been deleted'
-
-            ], 200);
-        } return response()->json([
-            'status' => 'error',
-            'message' => 'Beer not found'
-        ], 400);
+        $locker->delete();
     }
 }
 

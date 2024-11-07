@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\RoomController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,6 +27,21 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
 });
 
+    Route::post('/new-spirit', [RoomController::class, 'newbeer'])->name('newdrink');
+    Route::get('/new-spirit', [RoomController::class, 'newbeer']);
+
+// edit
+
+    Route::get('/edit-spirit', [RoomController::class, 'editdrink']);
+
+// Delete
+
+    Route::get('/delete', [RoomController::class, 'delete'])->name('deleted of the archives');
+
+
 require __DIR__.'/auth.php';
+
+

@@ -1,22 +1,22 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Warehouse</title>
+    <title>Edit Room</title>
 </head>
 <body>
-    <form action="{{route ('newdrink')}}" method="POST">
+    <form action="{{route ('editdrink')}}" method="POST">
+        @csrf
         <label for="">Fill the Beer House </label>
-        <input type="text" placeholder="Type of Beer" name="beer_type">
+        <input type="text" placeholder="Type of Beer" name="beer_type" {{$locker->id}}>
         <br><br>
         <label for=""></label>
-        <input type="text" placeholder="Price" name="beer_value" >
+        <input type="text" placeholder="Price" name="beer_value" {{$locker-$id}}>
         <br><br>
         <label for="">Description</label>
-        <input type="number" placeholder="=Alcohol by Volume" name="abv_value">
-        <br><br>
+        <input type="number" placeholder="=Alcohol by Volume" name="abv_value" {{$locker->$id}}>
     </form>
 
 </body>
