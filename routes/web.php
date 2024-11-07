@@ -35,11 +35,18 @@ Route::middleware('auth')->group(function () {
 
 // edit
 
-    Route::get('/edit-spirit', [RoomController::class, 'editdrink']);
+    Route::get('/edit-spirit/{$id}', [RoomController::class, 'editdrink']);
+    Route::put('/edit-spirit/{$id}', [RoomController::class, 'editdrink'])->name('updateddrink');
+
 
 // Delete
 
     Route::get('/delete', [RoomController::class, 'delete'])->name('deleted of the archives');
+
+// Show
+
+    Route::get('/to-show', [RoomController::class, 'listed']);
+
 
 
 require __DIR__.'/auth.php';

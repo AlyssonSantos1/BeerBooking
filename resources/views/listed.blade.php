@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Warehouse</title>
+    <title>Listed Everyone</title>
 </head>
 <body>
-    <form action="{{route ('newdrink')}}" method="POST">
+
         <label for="">Name </label>
         <input type="text" placeholder="Type of Beer" name="name_beer">
         <br><br>
@@ -20,6 +20,7 @@
         <label for="">Type</label>
         <input type="number" placeholder="Type of the Beer" name="type_beer">
     </form>
+
 
 </body>
 </html>

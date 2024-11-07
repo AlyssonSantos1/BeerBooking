@@ -9,14 +9,18 @@
 <body>
     <form action="{{route ('editdrink')}}" method="POST">
         @csrf
-        <label for="">Fill the Beer House </label>
-        <input type="text" placeholder="Type of Beer" name="beer_type" {{$locker->id}}>
-        <br><br>
-        <label for=""></label>
-        <input type="text" placeholder="Price" name="beer_value" {{$locker-$id}}>
-        <br><br>
-        <label for="">Description</label>
-        <input type="number" placeholder="=Alcohol by Volume" name="abv_value" {{$locker->$id}}>
+            <label for="">Name </label>
+            <input type="text" placeholder="Type of Beer" name="name_beer" {{$locker->id}}>
+            <br><br>
+            <label for="">Alcohol By Volume</label>
+            <input type="text" placeholder="Alcohol By Volume" name="abv_beer" {{$locker-$id}}>
+            <br><br>
+            <label for="">Price</label>
+            <input type="number" placeholder="Price" name="price_beer" {{$locker-$id}}>
+            <br><br>
+            <label for="">Type</label>
+            <input type="number" placeholder="Type of the Beer" name="type_beer" {{$locker-$id}}>
+
     </form>
 
 </body>
