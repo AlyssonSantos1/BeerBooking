@@ -8,7 +8,7 @@
 </head>
 <body>
     <form action="" method="POST">
-        <label for="">Fill the Beer House </label>
+        <label for="">Fill the Beer Form </label>
         <input type="text" placeholder="Type of Beer" name="beer_type">
         <br><br>
         <label for=""></label>
