@@ -45,7 +45,7 @@ class RoomController extends Controller
 
     public function listed (Request $request){
         $locker = Locker::all();
-        return view('index');
+        return view('listed');
     }
 }
 

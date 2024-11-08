@@ -7,7 +7,8 @@
     <title>Warehouse</title>
 </head>
 <body>
-    <form action="{{route ('newdrink')}}" method="POST">
+    <form action="{{ ('new-drink') }}" method="POST">
+        @csrf
         <label for="">Name </label>
         <input type="text" placeholder="Type of Beer" name="name_beer">
         <br><br>
