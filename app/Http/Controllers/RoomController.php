@@ -21,6 +21,8 @@ class RoomController extends Controller
 
         ]);
 
+        return view('index');
+
     }
 
     public function editdrink (Request $request, int $id){

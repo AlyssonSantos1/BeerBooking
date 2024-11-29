@@ -19,7 +19,9 @@
         <input type="number" placeholder="Price" name="price_beer">
         <br><br>
         <label for="">Type</label>
-        <input type="number" placeholder="Type of the Beer" name="type_beer">
+        <input type="text" placeholder="Type of the Beer" name="type_beer">
+        <br><br><br>
+        <button type="submit">Send</button>
     </form>
 
 </body>

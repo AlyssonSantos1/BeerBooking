@@ -1,3 +1,4 @@
+
 <?php
 
 use App\Http\Controllers\ProfileController;
@@ -29,6 +30,8 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
 });
+
+
 
     Route::post('/new-spirit', [RoomController::class, 'newbeer'])->name('new-drink');
     Route::get('/new-spirit', [RoomController::class, 'newbeer']);
