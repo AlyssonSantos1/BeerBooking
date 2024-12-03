@@ -10,7 +10,7 @@ use App\Http\Controllers\Controller;
 
 class RoomController extends Controller
 {
-    public function newbeer (request $request){
+    public function newbeer (Request $request){
         $Locker = $request->Locker;
         Locker::create([
 
