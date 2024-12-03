@@ -12,7 +12,7 @@ class RoomController extends Controller
 {
     public function newbeer (request $request){
         $Locker = $request->Locker;
-        Locker::created([
+        Locker::create([
 
             'name' => $request->name_beer,
             'description' => $request->description_beer,
@@ -21,7 +21,7 @@ class RoomController extends Controller
 
         ]);
 
-        return view('index');
+        return "Spirit is Added";
 
     }
 

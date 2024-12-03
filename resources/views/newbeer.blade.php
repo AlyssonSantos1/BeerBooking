@@ -21,7 +21,7 @@
         <label for="">Type</label>
         <input type="text" placeholder="Type of the Beer" name="type_beer">
         <br><br><br>
-        <button type="submit">Send</button>
+        
     </form>
 
 </body>
