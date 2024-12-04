@@ -21,18 +21,18 @@ class RoomController extends Controller
 
         ]);
 
-        return "Spirit is Added";
+        return view ('sucessful');
 
     }
 
     public function sucess (){
-        return view('index');
+        return view('newbeer');
 
     }
 
     public function editdrink (Request $request, int $id){
         $locker = Locker::findorfail($id);
-        return view('editdrink');
+        return view ('changed', compact('locker')); 
 
     }
 
@@ -48,6 +48,10 @@ class RoomController extends Controller
     public function delete (Request $request, int $id){
         $locker = Locker::findorfail($id);
         $locker->delete();
+    }
+
+    public function trash (){
+        return view('deleted', compact('locker'));
     }
 
     public function listed (Request $request){

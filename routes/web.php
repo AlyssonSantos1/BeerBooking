@@ -38,17 +38,21 @@ Route::middleware('auth')->group(function () {
 
 // edit
 
-    Route::get('/edit-spirit/{$id}', [RoomController::class, 'editdrink']);
-    Route::put('/edit-spirit/{$id}', [RoomController::class, 'editdrink'])->name('updateddrink');
+    Route::get('/edit-spirit/{id}', [RoomController::class, 'editdrink']);
+    Route::put('/edit-spirit/{id}', [RoomController::class, 'editdrink'])->name('updateddrink');
 
 
 // Delete
 
-    Route::get('/delete', [RoomController::class, 'delete'])->name('deleted of the archives');
+    Route::get('/delete/{id}', [RoomController::class, 'delete'])->name('deleted-drink');
 
 // Show
 
     Route::get('/to-show', [RoomController::class, 'listed']);
+
+// Back to initial
+
+    // Route:get('/backing', [])
 
 
 
