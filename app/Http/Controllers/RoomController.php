@@ -25,6 +25,11 @@ class RoomController extends Controller
 
     }
 
+    public function sucess (){
+        return view('index');
+
+    }
+
     public function editdrink (Request $request, int $id){
         $locker = Locker::findorfail($id);
         return view('editdrink');

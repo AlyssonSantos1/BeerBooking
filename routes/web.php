@@ -34,7 +34,7 @@ Route::middleware('auth')->group(function () {
 
 
     Route::post('/new-spirit', [RoomController::class, 'newbeer'])->name('new-drink');
-    Route::get('/new-spirit', [RoomController::class, 'newbeer']);
+    Route::get('/new-spirit', [RoomController::class, 'sucess']);
 
 // edit
 
