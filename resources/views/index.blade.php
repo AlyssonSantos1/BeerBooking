@@ -11,7 +11,7 @@
     </style>
 </head>
 <body>
-    <form action="newbeer" method="POST">
+    <form action="{{ route('new-drink') }}" method="POST">
         @csrf
         <label for="">Name </label>
         <input type="text" placeholder="Type of Beer" name="name_beer">
