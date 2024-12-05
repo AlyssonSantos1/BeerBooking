@@ -38,7 +38,7 @@ Route::middleware('auth')->group(function () {
 
 // edit
 
-    Route::get('/edit-spirit/{id}', [RoomController::class, 'edit'])->name('edit-drink');
+    Route::get('/edit-spirit/{id}', [RoomController::class, 'edit']);
     Route::put('/edit-spirit/{id}', [RoomController::class, 'update'])->name('updateddrink');
 
 
