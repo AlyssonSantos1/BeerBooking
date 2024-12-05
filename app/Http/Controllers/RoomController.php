@@ -30,9 +30,9 @@ class RoomController extends Controller
 
     }
 
-    public function editdrink (Request $request, int $id){
+    public function edit (Request $request, int $id){
         $locker = Locker::findorfail($id);
-        return view ('editdrink', compact('locker')); 
+        return view ('editdrink', compact('locker'));
 
     }
 
@@ -42,8 +42,13 @@ class RoomController extends Controller
         $locker->description = $request->description;
         $locker->price = $request->price;
         $locker->type = $request->type;
-        $locker->save();
+        $locker->save();  
+        
 
+    }
+
+    public function changed(){
+        return view('change');
     }
 
     public function delete (Request $request, int $id){

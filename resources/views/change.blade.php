@@ -8,7 +8,7 @@
 <body>
     "Spirit Is Edited"
 
-    <a href="/edit-spirit/{id}">Back</a>
+    <a href="/new-spirit">Back</a>
 
 
     
