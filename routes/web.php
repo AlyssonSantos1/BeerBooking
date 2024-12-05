@@ -39,7 +39,7 @@ Route::middleware('auth')->group(function () {
 // edit
 
     Route::get('/edit-spirit/{id}', [RoomController::class, 'edit'])->name('edit-drink');
-    Route::put('/edit-spirit/{id}', [RoomController::class, 'changed'])->name('updateddrink');
+    Route::put('/edit-spirit/{id}', [RoomController::class, 'update'])->name('updateddrink');
 
 
 // Delete

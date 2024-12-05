@@ -15,7 +15,7 @@ class RoomController extends Controller
         Locker::create([
 
             'name' => $request->name_beer,
-            'description' => $request->description_beer,
+            'description' => $request->alcoholbyvolume_beer,
             'price' => $request->price_beer,
             'type' => $request->type_beer,
 
@@ -38,10 +38,10 @@ class RoomController extends Controller
 
     public function update (Request $request, int $id){
         $locker = Locker::findorfail($id);
-        $locker->name = $request->name;
-        $locker->description = $request->description;
-        $locker->price = $request->price;
-        $locker->type = $request->type;
+        $locker->name = $request->name_beer;
+        $locker->description = $request->alcoholbyvolume_beer;
+        $locker->price = $request->price_beer;
+        $locker->type = $request->type_beer;
         $locker->save();  
         
 

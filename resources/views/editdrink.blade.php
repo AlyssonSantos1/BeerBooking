@@ -7,7 +7,7 @@
     <title>Edit Room</title>
 </head>
 <body>
-    <form action="{{  route  ('edit-drink', $locker->id)  }}" method="POST">
+    <form action="{{  route  ('updateddrink', $locker->id)  }}" method="POST">
         @csrf
         @method("PUT")
             
@@ -15,7 +15,7 @@
         <input type="text" placeholder="Type of Beer" name="name_beer" value="{{$locker->name}}">
         <br><br>
         <label for="">Alcohol By Volume</label>
-        <input type="number" placeholder="Alcohol By Volume" name="description_beer" value="{{$locker->type}}">
+        <input type="number" placeholder="Alcohol By Volume" name="alcoholbyvolume_beer" value="{{$locker->type}}">
         <br><br>
         <label for="">Price</label>
         <input type="number" placeholder="Price" name="price_beer" value="{{$locker->description}}">

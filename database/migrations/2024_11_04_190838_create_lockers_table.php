@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('lockers', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('description');
+            $table->string('alcoholbyvolume');
             $table->string('price');
             $table->string('type');
             $table->timestamps();
