@@ -8,6 +8,6 @@
 <body>
     "Deleted Drink"
 
-    <a href="deleted-drink">Back</a>
+    <a href="edit-spirit/{id}">Back</a>
 </body>
 </html>

@@ -7,7 +7,7 @@
     <title>Trash</title>
 </head>
 <body>
-    <form action="{{ route('deleted-drink', $locker->id) }}" method="POST">
+    <form action="{{ route('delete-spirit', $locker->id) }}" method="POST">
         @csrf
             <label for="">Name </label>
             <input type="text" placeholder="Type of Beer" name="name_beer" value="{{$locker->name}}">
