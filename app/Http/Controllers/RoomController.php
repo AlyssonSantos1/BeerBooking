@@ -43,28 +43,31 @@ class RoomController extends Controller
         $locker->price = $request->price_beer;
         $locker->type = $request->type_beer;
         $locker->save();
-       
+        return view ('change', compact('locker'));       
         
 
-    }
-
-    public function changed(){
-        return view('change');
     }
 
     public function delete (Request $request, int $id){
         $locker = Locker::findorfail($id);
         $locker->delete();
+        return view('delete', compact('locker'));
     }
 
     public function trash (){
-        return view('deleted', compact('locker'));
+        return view('excluded');
     }
 
-    public function listed (Request $request){
+    public function list (){
         $locker = Locker::all();
-        return view('listed');
+        return view('listed', compact('locker'));
+    }
+
+    public function listone (Request $request, int $id){
+        $locker = Locker::findorfail($id);
+        return view('listone', compact('locker'));
     }
 }
+
 
 

@@ -4,12 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Trash</title>
+    <title>List All</title>
 </head>
 <body>
-    <form action="{{ route('excluded-drink', $locker->id) }}" method="POST">
-        @csrf
-        @method("PUT")
+               
         <label for="">Name </label>
         <input type="text" placeholder="Type of Beer" name="name_beer" value="{{$locker->name}}">
         <br><br>
@@ -22,8 +20,7 @@
         <label for="">Type</label>
         <input type="text" placeholder="Type of the Beer" name="type_beer" value="{{$locker->type}}">
         <br><br><br>
-        <button type="submit">Delete Beer</button>
-
+        
     </form>
 
 </body>

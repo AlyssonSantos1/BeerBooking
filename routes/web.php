@@ -40,15 +40,21 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/edit-spirit/{id}', [RoomController::class, 'edit']);
     Route::put('/edit-spirit/{id}', [RoomController::class, 'update'])->name('updateddrink');
+    
 
 
 // Delete
 
-    Route::get('/delete/{id}', [RoomController::class, 'delete'])->name('deleted-drink');
+    Route::get('/delete/{id}', [RoomController::class, 'delete'])->name('delete-drink');
+    Route::put('/delete/{id}', [RoomController::class, 'trash'])->name('excluded-drink');
 
 // Show
 
-    Route::get('/to-show', [RoomController::class, 'listed']);
+    Route::get('/to-show', [RoomController::class, 'list'])->name('listallbeers');
+
+// Show only beer in the book
+
+    Route::get('/to-show/{id}', [RoomController::class, 'listone'])->name('listed-unit');
 
 
 
