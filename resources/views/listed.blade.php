@@ -1,28 +1,20 @@
-<!DOCTYPE html>
-<html lang="en-us">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Listed Everyone</title>
-</head>
-<body>
-    
-        <label for="">Name </label>
-        <input type="text" placeholder="Type of Beer" name="name_beer">
-        <br><br>
-        <label for="">Alcohol By Volume</label>
-        <input type="number" placeholder="Alcohol By Volume" name="alcoholbyvolume_beer" >
-        <br><br>
-        <label for="">Price</label>
-        <input type="number" placeholder="Price" name="price_beer">
-        <br><br>
-        <label for="">Type</label>
-        <input type="text" placeholder="Type of the Beer" name="type_beer">
-        <br><br><br>
-        
+<h1>Listed All Beer in the Book</h1>
+<table>
+    <tr>
+        <th>name</th>
+        <th>alcoholbyvolume</th>
+        <th>price</th>
+        <th>type</th>
+    </tr>
 
 
+    <tr>
+        <td>
+            <th>$locker->name</th>
+            <th>$locker->alcoholbyvolume</th>
+            <th>$locker->price</th>
+            <th>$locker->type</th>
 
-</body>
-</html>
+        </td>
+    </tr>
+</table>
