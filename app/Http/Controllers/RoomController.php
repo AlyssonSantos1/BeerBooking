@@ -42,7 +42,8 @@ class RoomController extends Controller
         $locker->alcoholbyvolume = $request->alcoholbyvolume_beer;
         $locker->price = $request->price_beer;
         $locker->type = $request->type_beer;
-        $locker->save();  
+        $locker->save();
+       
         
 
     }
