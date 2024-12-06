@@ -50,7 +50,7 @@ Route::middleware('auth')->group(function () {
 
 // Show
 
-    Route::get('/to-show', [RoomController::class, 'list'])->name('listallbeers');
+    Route::get('/to-show', [RoomController::class, 'list'])->name('list-all-beers');
 
 // Show only beer in the book
 

@@ -65,7 +65,7 @@ class RoomController extends Controller
 
     public function listone (Request $request, int $id){
         $locker = Locker::findorfail($id);
-        return view('listone', compact('locker'));
+        return view('listonly', compact('locker'));
     }
 }
 

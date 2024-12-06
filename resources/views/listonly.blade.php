@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>List All</title>
+    <title> Only Beer</title>
 </head>
 <body>
-               
+    <form action="{{ route('listed-unit', $locker->id) }}" method="POST">
+        
         <label for="">Name </label>
         <input type="text" placeholder="Type of Beer" name="name_beer" value="{{$locker->name}}">
         <br><br>
@@ -21,6 +22,7 @@
         <input type="text" placeholder="Type of the Beer" name="type_beer" value="{{$locker->type}}">
         <br><br><br>
         
+
     </form>
 
 </body>
